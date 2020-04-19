@@ -32,6 +32,15 @@ registerUnbound('format-currency', function(val) {
     }
     return I18n.t('memberships.currency.GBP') + amount[0] + "," + amount[1];
   }
+  else if (Discourse.SiteSettings.memberships_currency == 'INR') {
+    var amount = val.split('.')
+    if (amount[1] == undefined) {
+      amount[1] = '00'
+    } else {
+      amount[1] = (amount[1] + '000').substring(0, 2)
+    }
+    return I18n.t('memberships.currency.INR') + amount[0] + ',' + amount[1]
+  }
   else if (Discourse.SiteSettings.memberships_currency == "USD"){
     var amount = val.split(".");
     if (amount[1] == undefined){

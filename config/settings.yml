@@ -8,7 +8,7 @@ procourse_memberships:
     default: false
     client: true
   memberships_contact_user:
-    default: ''
+    default: ""
     type: username
   memberships_currency:
     client: true
@@ -19,6 +19,7 @@ procourse_memberships:
       - "EUR"
       - "GBP"
       - "USD"
+      - "INR"
   memberships_gateway:
     client: true
     type: enum

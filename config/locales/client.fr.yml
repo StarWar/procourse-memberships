@@ -106,6 +106,7 @@ fr:
         EUR: "€"
         GBP: "£"
         USD: "$"
+        INR: "₹"
 
   memberships:
     errors:
